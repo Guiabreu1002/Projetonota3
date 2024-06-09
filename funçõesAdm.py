@@ -11,7 +11,7 @@ def funcao_adm(op1,email,senha):
     if op1 != "1" and op1 != "2" and op1 != "3" and op1 != "4" and op1 != "5" and op1 != "6" and op1 != "7" and op1 != "8" and op1 != "9" and op1 != "10" and op1 != "sudo su" and op1 != "sudo adm":
         print("\ncaracteres invalidos, tente novamente\n")
     elif op1 == "1":
-        filmes = open('../Filmes.txt', 'r')
+        filmes = open('Filmes.txt', 'r')
         ler = filmes.readlines()
         for i in ler:
             filme = i.split(",")
@@ -153,11 +153,11 @@ def funcao_adm(op1,email,senha):
         plt.tight_layout()
         plt.savefig('graficos_ganhos.png')
 
-        img = Image.open('../graficos_ganhos.png')
+        img = Image.open('graficos_ganhos.png')
         img.show()
         #plt.show()
     elif op1 == '9':
-        show_ganhos = open('../ingressos_clientes.txt', 'r')
+        show_ganhos = open('ingressos_clientes.txt', 'r')
         linhas = show_ganhos.readlines()
         show_ganhos.close()
         ganhos = {}
@@ -179,7 +179,7 @@ def funcao_adm(op1,email,senha):
         plt.tight_layout()
         plt.savefig('graficos_ingressos.png')
 
-        img = Image.open('../graficos_ingressos.png')
+        img = Image.open('graficos_ingressos.png')
         img.show()
         #plt.show()
     elif op1 == "sudo su" or op1 == "sudo adm":
